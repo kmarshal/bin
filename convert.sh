@@ -17,4 +17,4 @@ function resize {
 	done
 }
 
-resize "$@" | zenity --progress --auto-close --title="Resize image" --text="Image resizing in progress..." --width=400
+resize "$@" | zenity --progress --auto-close --title="Resize image" --text="Resizing $# images..." --width=400
