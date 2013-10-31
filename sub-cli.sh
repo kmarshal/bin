@@ -18,7 +18,7 @@ subSrt="${file:0:$len-3}srt"
 mplayerDump="dumpsub.sub"
 execName=`basename "$0"` 
 
-cd $dir
+cd "$dir"
 qnapi -c -q "$file"
 
 if [ -f "$sub" ]; then
@@ -27,8 +27,7 @@ if [ -f "$sub" ]; then
 	if [ -f $mplayerDump ]; then
 		rm "$sub"
 		mv $mplayerDump "$subSrt"
-		echo "Pobrano i dopasowano napisy."
-		echo "Plik: $subSrt"
+		echo "Pobrano i dopasowano napisy. Plik: $subSrt"
 	else 
 		echo "Błąd konwersji mplayer"
 	fi
